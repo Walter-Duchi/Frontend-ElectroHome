@@ -1,5 +1,5 @@
 import api from './api';
-import { Category } from '../src/types/ecommerce';
+import type { Category } from '../src/types/ecommerce';
 
 export const categoryService = {
     async getAllCategories(): Promise<Category[]> {

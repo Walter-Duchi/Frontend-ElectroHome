@@ -1,4 +1,3 @@
-// Frontend/components/Analista/AnalistaDashboard.tsx
 import React, { useState, useEffect } from 'react';
 import {
   Container, Grid, Paper, Typography, Box, Card, CardContent,
@@ -334,7 +333,7 @@ const AnalistaDashboard: React.FC = () => {
                   dataKey="cantidad"
                   nameKey="estado"
                 >
-                  {data.reclamosPorEstado.map((entry, index) => (
+                  {data.reclamosPorEstado.map((_entry, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>

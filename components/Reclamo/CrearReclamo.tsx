@@ -31,7 +31,7 @@ import {
   FormControl,
   InputLabel,
   Select,
-  SelectChangeEvent,
+  type SelectChangeEvent,
   Tabs,
   Tab,
 } from '@mui/material';
@@ -43,11 +43,10 @@ import {
   Print as PrintIcon,
   Person as PersonIcon,
   List as ListIcon,
-  ShoppingCart as ShoppingCartIcon,
 } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { reclamoService } from '../../services/reclamoService';
-import { ProductoReclamado, ValidarClienteResponse, ProductoCompradoDTO } from '../../src/types/reclamo';
+import type { ProductoReclamado, ValidarClienteResponse, ProductoCompradoDTO } from '../../src/types/reclamo';
 
 interface ClienteValidadoType {
   esValido: boolean;

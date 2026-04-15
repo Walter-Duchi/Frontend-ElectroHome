@@ -20,15 +20,6 @@ import {
     FormControlLabel,
 } from '@mui/material';
 import {
-    Person,
-    Email,
-    Phone,
-    Business,
-    LocationCity,
-    LocationOn,
-    Home,
-    Badge,
-    Lock,
     Visibility,
     VisibilityOff,
     ArrowBack,

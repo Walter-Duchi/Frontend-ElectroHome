@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import {
   AppBar,
   Box,
@@ -20,7 +20,6 @@ import {
   AccountCircle,
   ExitToApp,
   Add,
-  ShoppingCart,
   Store,
   Assignment,
   Receipt,
@@ -36,7 +35,6 @@ interface DashboardLayoutProps {
 
 function DashboardLayout({ children }: DashboardLayoutProps) {
   const navigate = useNavigate();
-  const location = useLocation();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [showCreateModal, setShowCreateModal] = useState(false);
   const { auth, logout, userRole } = useAuth();

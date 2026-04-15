@@ -13,7 +13,6 @@ interface MovimientosListProps {
 
 const MovimientosList: React.FC<MovimientosListProps> = ({ productos }) => {
   const [movimientos, setMovimientos] = useState<MovimientoInventario[]>([]);
-  const [loading, setLoading] = useState(false);
   const [filtroProducto, setFiltroProducto] = useState<number | ''>('');
   const [filtroDesde, setFiltroDesde] = useState('');
   const [filtroHasta, setFiltroHasta] = useState('');
@@ -23,7 +22,6 @@ const MovimientosList: React.FC<MovimientosListProps> = ({ productos }) => {
   }, [filtroProducto, filtroDesde, filtroHasta]);
 
   const cargarMovimientos = async () => {
-    setLoading(true);
     try {
       const data = await inventarioService.getMovimientos(
         filtroProducto || undefined,
@@ -33,8 +31,6 @@ const MovimientosList: React.FC<MovimientosListProps> = ({ productos }) => {
       setMovimientos(data);
     } catch (error) {
       console.error(error);
-    } finally {
-      setLoading(false);
     }
   };
 

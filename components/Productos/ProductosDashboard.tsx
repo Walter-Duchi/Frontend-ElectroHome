@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import {
   Container, Typography, Box, Tabs, Tab, Paper, Button, Alert,
-  CircularProgress, Dialog, DialogTitle, DialogContent, DialogActions,
-  TextField, MenuItem, FormControlLabel, Switch, IconButton,
+  Dialog, DialogTitle, DialogContent,
+  IconButton,
   Card, CardMedia, CardContent, CardActions, Grid, Chip
 } from '@mui/material';
 import { Add, Refresh, Edit, Delete, Visibility, VisibilityOff } from '@mui/icons-material';
 import { productoManagementService } from '../../services/productoManagementService';
-import { inventarioService } from '../../services/inventarioService';
 import type { ProductoManagement, Categoria, Marca } from '../../src/types/producto';
 import ProductoForm from './ProductoForm';
 import CategoriaForm from './CategoriaForm';
@@ -114,7 +113,7 @@ const ProductosDashboard: React.FC = () => {
           </Box>
           <Grid container spacing={2}>
             {productos.map(p => (
-              <Grid size={{xs:12, sm:6, md:4}} key={p.id}>
+              <Grid size={{ xs: 12, sm: 6, md: 4 }} key={p.id}>
                 <Card>
                   {p.imagenUrl && (
                     <CardMedia

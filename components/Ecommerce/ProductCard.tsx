@@ -11,7 +11,7 @@ import {
   Tooltip
 } from '@mui/material';
 import { AddShoppingCart } from '@mui/icons-material';
-import { Product } from '../../src/types/ecommerce';
+import type { Product } from '../../src/types/ecommerce';
 import { useAuth } from '../../services/authContext';
 import { useNavigate } from 'react-router-dom';
 import { cartService } from '../../services/cartService';

@@ -12,7 +12,6 @@ import {
   Divider,
   Paper,
   InputAdornment,
-  IconButton,
   Snackbar
 } from '@mui/material';
 import {
@@ -25,11 +24,9 @@ import {
   Cancel
 } from '@mui/icons-material';
 import { empresaService } from '../../services/empresaService';
-import { DatosEmpresa, UpdateDatosEmpresaRequest } from '../../src/types/empresa';
-import { useAuth } from '../../services/authContext';
+import type { DatosEmpresa, UpdateDatosEmpresaRequest } from '../../src/types/empresa';
 
 const DatosEmpresaConfig: React.FC = () => {
-  const { auth } = useAuth();
   const [datos, setDatos] = useState<DatosEmpresa>({
     id: 0,
     rucEmpresa: '',

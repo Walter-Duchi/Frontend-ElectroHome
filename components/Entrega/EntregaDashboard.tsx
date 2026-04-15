@@ -15,7 +15,6 @@ import {
   TableHead,
   TableRow,
   Paper,
-  LinearProgress,
   Chip,
   Stepper,
   Step,

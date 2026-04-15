@@ -2,10 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import {
   Box, TextField, MenuItem, FormControl, InputLabel, Select,
-  Grid, Button, FormControlLabel, Switch, Typography, IconButton,
+  Grid, Button, FormControlLabel, Switch, Typography,
   Chip, Stack
 } from '@mui/material';
-import { Delete, CloudUpload } from '@mui/icons-material';
+import { CloudUpload } from '@mui/icons-material';
 import type { ProductoManagement, Marca, Categoria } from '../../src/types/producto';
 
 interface ProductoFormProps {
@@ -119,7 +119,7 @@ const ProductoForm: React.FC<ProductoFormProps> = ({
   return (
     <Box component="form" onSubmit={handleSubmit} sx={{ mt: 2 }}>
       <Grid container spacing={2}>
-        <Grid size={{xs:12, md:6}}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <TextField
             label="SKU"
             name="sku"
@@ -130,7 +130,7 @@ const ProductoForm: React.FC<ProductoFormProps> = ({
             size="small"
           />
         </Grid>
-        <Grid size={{xs:12, md:6}}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <TextField
             label="Código"
             name="codigo"
@@ -142,7 +142,7 @@ const ProductoForm: React.FC<ProductoFormProps> = ({
           />
         </Grid>
 
-        <Grid size={{xs:12, md:6}}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <FormControl fullWidth size="small" required>
             <InputLabel>Marca</InputLabel>
             <Select
@@ -158,7 +158,7 @@ const ProductoForm: React.FC<ProductoFormProps> = ({
           </FormControl>
         </Grid>
 
-        <Grid size={{xs:12, md:6}}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <FormControl fullWidth size="small">
             <InputLabel>Categoría</InputLabel>
             <Select
@@ -175,7 +175,7 @@ const ProductoForm: React.FC<ProductoFormProps> = ({
           </FormControl>
         </Grid>
 
-        <Grid size={{xs:12, md:6}}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <TextField
             label="Modelo"
             name="modelo"
@@ -187,7 +187,7 @@ const ProductoForm: React.FC<ProductoFormProps> = ({
           />
         </Grid>
 
-        <Grid size={{xs:12, md:6}}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <TextField
             label="Precio"
             name="precio"
@@ -201,7 +201,7 @@ const ProductoForm: React.FC<ProductoFormProps> = ({
           />
         </Grid>
 
-        <Grid size={{xs:12, md:6}}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <TextField
             label="Días de Garantía"
             name="diasGarantia"
@@ -215,7 +215,7 @@ const ProductoForm: React.FC<ProductoFormProps> = ({
           />
         </Grid>
 
-        <Grid size={{xs:12, md:6}}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <FormControl fullWidth size="small">
             <InputLabel>Visibilidad</InputLabel>
             <Select
@@ -231,7 +231,7 @@ const ProductoForm: React.FC<ProductoFormProps> = ({
           </FormControl>
         </Grid>
 
-        <Grid size={{xs:12, md:3}}>
+        <Grid size={{ xs: 12, md: 3 }}>
           <TextField
             label="Peso (kg)"
             name="pesoKg"
@@ -244,7 +244,7 @@ const ProductoForm: React.FC<ProductoFormProps> = ({
           />
         </Grid>
 
-        <Grid size={{xs:12, md:3}}>
+        <Grid size={{ xs: 12, md: 3 }}>
           <TextField
             label="Alto (cm)"
             name="altoCm"
@@ -258,7 +258,7 @@ const ProductoForm: React.FC<ProductoFormProps> = ({
           />
         </Grid>
 
-        <Grid size={{xs:12, md:3}}>
+        <Grid size={{ xs: 12, md: 3 }}>
           <TextField
             label="Ancho (cm)"
             name="anchoCm"
@@ -272,7 +272,7 @@ const ProductoForm: React.FC<ProductoFormProps> = ({
           />
         </Grid>
 
-        <Grid size={{xs:12, md:3}}>
+        <Grid size={{ xs: 12, md: 3 }}>
           <TextField
             label="Profundidad (cm)"
             name="profundidadCm"
@@ -286,7 +286,7 @@ const ProductoForm: React.FC<ProductoFormProps> = ({
           />
         </Grid>
 
-        <Grid size={{xs:12}}>
+        <Grid size={{ xs: 12 }}>
           <TextField
             label="Especificaciones"
             name="especificacion"
@@ -300,7 +300,7 @@ const ProductoForm: React.FC<ProductoFormProps> = ({
           />
         </Grid>
 
-        <Grid size={{xs:12}}>
+        <Grid size={{ xs: 12 }}>
           <TextField
             label="Descripción"
             name="descripcion"
@@ -314,7 +314,7 @@ const ProductoForm: React.FC<ProductoFormProps> = ({
         </Grid>
 
         {/* Imágenes */}
-        <Grid size={{xs:12}}>
+        <Grid size={{ xs: 12 }}>
           <Typography variant="subtitle2" gutterBottom>Imagen Principal</Typography>
           <Button
             variant="outlined"
@@ -341,7 +341,7 @@ const ProductoForm: React.FC<ProductoFormProps> = ({
           )}
         </Grid>
 
-        <Grid size={{xs:12}}>
+        <Grid size={{ xs: 12 }}>
           <Typography variant="subtitle2" gutterBottom>Imágenes Adicionales</Typography>
           <Button
             variant="outlined"
@@ -375,7 +375,7 @@ const ProductoForm: React.FC<ProductoFormProps> = ({
         </Grid>
 
         {producto && (
-          <Grid size={{xs:12}}>
+          <Grid size={{ xs: 12 }}>
             <FormControlLabel
               control={
                 <Switch
@@ -389,7 +389,7 @@ const ProductoForm: React.FC<ProductoFormProps> = ({
           </Grid>
         )}
 
-        <Grid size={{xs:12}} sx={{ display: 'flex', justifyContent: 'flex-end', gap: 2, mt: 2 }}>
+        <Grid size={{ xs: 12 }} sx={{ display: 'flex', justifyContent: 'flex-end', gap: 2, mt: 2 }}>
           <Button onClick={onCancel} variant="outlined" disabled={loading}>
             Cancelar
           </Button>

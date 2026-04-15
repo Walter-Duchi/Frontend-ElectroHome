@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Table, TableBody, TableCell, TableContainer, TableHead, TableRow,
-  Paper, IconButton, Chip, Box, Typography
+  Paper, IconButton, Chip, Typography
 } from '@mui/material';
 import { Edit, Delete } from '@mui/icons-material';
 import type { Ubicacion } from '../../src/types/inventario';

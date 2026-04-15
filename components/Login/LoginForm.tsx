@@ -8,12 +8,8 @@ import {
   Button,
   Alert,
   CircularProgress,
-  Grid,
-  Link,
-  Divider,
   InputAdornment,
   IconButton,
-  Stack,
 } from '@mui/material';
 import {
   Lock as LockIcon,
@@ -133,7 +129,7 @@ const LoginForm: React.FC = () => {
                 ),
               }}
             />
-            
+
             <TextField
               label="Contraseña"
               type={showPassword ? 'text' : 'password'}
@@ -161,14 +157,14 @@ const LoginForm: React.FC = () => {
             />
 
             <Box sx={{ textAlign: 'right', mb: 3 }}>
-              <Link
-                component={RouterLink}
+              <RouterLink
                 to="/forgot-password"
-                variant="body2"
-                sx={{ textDecoration: 'none' }}
+                style={{ textDecoration: 'none' }}
               >
-                ¿Olvidaste tu contraseña?
-              </Link>
+                <Typography variant="body2" color="primary">
+                  ¿Olvidaste tu contraseña?
+                </Typography>
+              </RouterLink>
             </Box>
 
             <Button

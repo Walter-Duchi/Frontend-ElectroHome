@@ -10,9 +10,8 @@ import {
   Button,
   Grid,
 } from '@mui/material';
-import { useAuth } from '../../services/authContext';
 import { cartService } from '../../services/cartService';
-import { CartItem } from '../../src/types/ecommerce';
+import type { CartItem } from '../../src/types/ecommerce';
 import { useNavigate } from 'react-router-dom';
 import api from '../../services/api';
 
@@ -35,13 +34,11 @@ declare global {
 }
 
 const Checkout: React.FC = () => {
-  const { auth } = useAuth();
   const navigate = useNavigate();
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [initData, setInitData] = useState<PayphoneInitData | null>(null);
-  const [processing, setProcessing] = useState(false);
 
   useEffect(() => {
     loadCart();

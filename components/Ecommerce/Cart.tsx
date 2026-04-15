@@ -20,7 +20,7 @@ import {
 import { Delete, Add, Remove, ShoppingCart as CartIcon } from '@mui/icons-material';
 import { useAuth } from '../../services/authContext';
 import { cartService } from '../../services/cartService';
-import { CartItem } from '../../src/types/ecommerce';
+import type { CartItem } from '../../src/types/ecommerce';
 import { useNavigate } from 'react-router-dom';
 
 const Cart: React.FC = () => {
@@ -202,13 +202,13 @@ const Cart: React.FC = () => {
               <Typography variant="h5" gutterBottom>
                 Total: ${total.toFixed(2)}
               </Typography>
-                <Button
-                  variant="contained"
-                  size="large"
-                  onClick={() => navigate('/checkout')}
-                >-
-                  Proceder al pago
-                </Button>
+              <Button
+                variant="contained"
+                size="large"
+                onClick={() => navigate('/checkout')}
+              >
+                Proceder al pago
+              </Button>
             </Box>
           </Box>
         </>

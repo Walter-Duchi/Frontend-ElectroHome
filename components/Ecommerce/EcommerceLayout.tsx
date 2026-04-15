@@ -25,14 +25,13 @@ import {
   AccountCircle,
   ExitToApp,
   Dashboard,
-  PersonAdd,
   Assignment
 } from '@mui/icons-material';
 import { useAuth } from '../../services/authContext';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { cartService } from '../../services/cartService';
 import { categoryService } from '../../services/categoryService';
-import { Category } from '../../src/types/ecommerce';
+import type { Category } from '../../src/types/ecommerce';
 import { ThemeSelector } from '../ThemeSelector/ThemeSelector';
 
 interface EcommerceLayoutProps {
@@ -50,7 +49,6 @@ const EcommerceLayout: React.FC<EcommerceLayoutProps> = ({
 }) => {
   const { auth, logout, userRole } = useAuth();
   const navigate = useNavigate();
-  const location = useLocation();
   const theme = useTheme();
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);

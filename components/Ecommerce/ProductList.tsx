@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Typography, Box } from '@mui/material';
 import ProductCard from './ProductCard';
-import { Product } from '../../src/types/ecommerce';
+import type { Product } from '../../src/types/ecommerce';
 
 interface ProductListProps {
   products: Product[];

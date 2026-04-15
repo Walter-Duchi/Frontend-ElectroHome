@@ -16,7 +16,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { productService } from '../../services/productService';
 import { cartService } from '../../services/cartService';
 import { useAuth } from '../../services/authContext';
-import { Product } from '../../src/types/ecommerce';
+import type { Product } from '../../src/types/ecommerce';
 
 const ProductDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();

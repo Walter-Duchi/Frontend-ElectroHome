@@ -1,5 +1,5 @@
 import { useTheme as useMuiTheme } from '@mui/material/styles';
-import { corporateTheme, themeUtils } from './index';
+import { themeUtils } from './index';
 
 export const useCustomTheme = () => {
     const theme = useMuiTheme();

@@ -33,7 +33,7 @@ import {
     VisibilityOff,
 } from '@mui/icons-material';
 import { userService } from '../../services/userService';
-import { ProfileResponse } from '../../src/types/user';
+import type { ProfileResponse } from '../../src/types/user';
 
 const Profile: React.FC = () => {
     const [profile, setProfile] = useState<ProfileResponse | null>(null);

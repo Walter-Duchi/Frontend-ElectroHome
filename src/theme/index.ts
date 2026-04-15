@@ -276,7 +276,6 @@ const components = {
       '::-webkit-scrollbar-thumb': {
         borderRadius: '5px',
       },
-      scrollbarWidth: 'thin',
     },
   },
   MuiButton: {
@@ -426,7 +425,7 @@ const breakpoints = {
 };
 
 // Configuración de sombras para modo claro
-const shadowsLight = [
+const shadowsLight: Theme['shadows'] = [
   'none',
   '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
   '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)',
@@ -434,11 +433,11 @@ const shadowsLight = [
   '0 14px 28px rgba(0,0,0,0.12), 0 10px 10px rgba(0,0,0,0.08)',
   '0 19px 38px rgba(0,0,0,0.14), 0 15px 12px rgba(0,0,0,0.06)',
   '0 24px 48px rgba(0,0,0,0.16), 0 20px 20px rgba(0,0,0,0.08)',
-  ...Array(19).fill('none'),
-];
+  ...Array(18).fill('none'),
+] as Theme['shadows'];
 
 // Configuración de sombras para modo oscuro
-const shadowsDark = [
+const shadowsDark: Theme['shadows'] = [
   'none',
   '0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.4)',
   '0 3px 6px rgba(0,0,0,0.4), 0 3px 6px rgba(0,0,0,0.5)',
@@ -446,8 +445,8 @@ const shadowsDark = [
   '0 14px 28px rgba(0,0,0,0.35), 0 10px 10px rgba(0,0,0,0.25)',
   '0 19px 38px rgba(0,0,0,0.4), 0 15px 12px rgba(0,0,0,0.3)',
   '0 24px 48px rgba(0,0,0,0.45), 0 20px 20px rgba(0,0,0,0.35)',
-  ...Array(19).fill('none'),
-];
+  ...Array(18).fill('none'),
+] as Theme['shadows'];
 
 // Crear tema corporativo principal (MODO CLARO)
 export const corporateTheme: Theme = createTheme(
@@ -561,7 +560,7 @@ export type ThemeMode = 'light' | 'dark' | 'auto';
 // Función de utilidad para usar el tema en componentes
 export const themeUtils = {
   getSpacing: (multiple: number) => `${multiple * 8}px`,
-  getTransition: (property: string = 'all') => 
+  getTransition: (property: string = 'all') =>
     `${property} 0.3s cubic-bezier(0.4, 0, 0.2, 1)`,
   getBorderRadius: (size: 'sm' | 'md' | 'lg' | 'xl' = 'md') => {
     const sizes = {
@@ -572,7 +571,7 @@ export const themeUtils = {
     };
     return sizes[size];
   },
-  getBoxShadow: (level: 0 | 1 | 2 | 3 | 4 | 5 | 6 = 1, mode: 'light' | 'dark' = 'light') => 
+  getBoxShadow: (level: 0 | 1 | 2 | 3 | 4 | 5 | 6 = 1, mode: 'light' | 'dark' = 'light') =>
     mode === 'light' ? shadowsLight[level] : shadowsDark[level],
 };
 

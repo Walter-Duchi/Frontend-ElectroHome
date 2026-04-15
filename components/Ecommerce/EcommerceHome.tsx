@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Typography, Box, Divider, Tabs, Tab } from '@mui/material';
+import { Container, Typography, Box, Tabs, Tab } from '@mui/material';
 import EcommerceLayout from './EcommerceLayout';
 import ProductList from './ProductList';
 import { productService } from '../../services/productService';
-import { Product, ProductFilter } from '../../src/types/ecommerce';
+import type { Product, ProductFilter } from '../../src/types/ecommerce';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -86,7 +86,7 @@ const EcommerceHome: React.FC = () => {
     setSelectedCategory(categoryId);
   };
 
-  const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleTabChange = (_event: React.SyntheticEvent, newValue: number) => {
     setTabValue(newValue);
   };
 

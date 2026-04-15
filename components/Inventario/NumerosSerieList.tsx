@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import {
     Table, TableBody, TableCell, TableContainer, TableHead, TableRow,
-    Paper, TextField, MenuItem, Box, Typography, Chip, IconButton,
+    Paper, MenuItem, Box, Typography, Chip, IconButton,
     Dialog, DialogTitle, DialogContent, DialogActions, Button,
     FormControl, InputLabel, Select, CircularProgress, Alert,
     TablePagination
 } from '@mui/material';
 import { Edit, Refresh } from '@mui/icons-material';
 import { inventarioService } from '../../services/inventarioService';
-import { productoManagementService } from '../../services/productoManagementService';
 import type { ProductoManagement } from '../../src/types/producto';
 import type { Ubicacion, NumeroSerie } from '../../src/types/inventario';
 

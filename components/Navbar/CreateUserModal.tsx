@@ -16,7 +16,6 @@ import {
   Step,
   StepLabel,
   InputAdornment,
-  IconButton,
   Checkbox,
   FormControlLabel,
   FormGroup,
@@ -34,7 +33,6 @@ import {
   LocationOn,
   Home,
   Badge,
-  Password,
   ContentCopy,
 } from '@mui/icons-material';
 import { userService } from '../../services/userService';
@@ -89,7 +87,6 @@ function CreateUserModal({ onClose }: CreateUserModalProps) {
   const [loading, setLoading] = useState(false);
   const [submitError, setSubmitError] = useState('');
   const [successResponse, setSuccessResponse] = useState<CreateUserResponse | null>(null);
-  const [showPassword, setShowPassword] = useState(false);
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
