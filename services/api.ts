@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5298/api'; // Tu backend
+const API_URL = 'https://eccomerce.somee.com/api';
 
 const api = axios.create({
     baseURL: API_URL,
